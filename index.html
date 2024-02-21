@@ -10,7 +10,9 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
 </head>
 <!-- OKAY BODY HERE -->
 
@@ -19,32 +21,49 @@
         <div class="row col-12 text-center">
             <h1> Play Rock Paper Scissors</h1>
         </div>
-        <!-- ROCK PAPER SCISSORS BUTTONS-->
-            <div class="row align-items-start">
-                <div class="col-lg-4 col-md-4 col-sm-12 ">
-                    <button type="button" class="btn btn-outline-light">Rock</button>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <button type="button" class="btn btn-outline-light">Paper</button>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <button type="button" class="btn btn-outline-light">Scissors</button>
-                </div>
-            </div>
-        </div>
+
         <!-- Display rock paper scissors-->
         <div class="row text-center p-5">
             <div class="col-lg-6 col-md-6 col-sm-6 ">
-                asas
+                <!-- User-->
+                <label for="userName" class="form-label"> Username</label>
+
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="sample: Rock Master"
+                        aria-label="Recipient's username" aria-describedby="button-addon2" id="userName">
+                    <button class="btn btn-dark" type="button" id="button-addon2">Submit</button>
+                </div>
+
+
+
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                asaa
+            <div class="col-lg-6 col-md-6 col-sm-6 p-3">
+                Challenger Name:
+                <div class="border rounded" id="nameDisplay"></div>
             </div>
         </div>
-        <!-- wins and losses display-->
-        <div class="row border">
-            sfsdf
+       
+        <!-- ROCK PAPER SCISSORS BUTTONS-->
+        <div class="row align-items-start p-5">
+            <div class="col-lg-4 col-md-4 col-sm-4 p-2">
+                <button type="button" class="btn btn-outline-light"><img src="image/rock.png"> <br>Rock</button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 p-2">
+                <button type="button" class="btn btn-outline-light"><img src="image/paper.png"><br> Paper</button>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 p-2">
+                <button type="button" class="btn btn-outline-light"><img src="image/scissors.png"><br>scissors</button>
+            </div>
         </div>
+
+ <!-- wins and losses display-->
+        <div class="row border rounded">
+
+        </div>
+
+
+    </div>
     </div>
     <footer>
         <!-- place footer here -->

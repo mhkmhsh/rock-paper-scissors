@@ -1,4 +1,12 @@
 body{
 	background-color: #abb7ad;
 	overflow-x:hidden;
+	font-family: "Barriecito";
+	font-weight: 400;
+	font-style: normal;
 }
+img{
+	height:50%;
+	width:50%;
+}
+  
