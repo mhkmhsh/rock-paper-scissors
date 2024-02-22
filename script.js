@@ -1,16 +1,8 @@
 
 //let scoreBoard = parseInt(document.getElementById('scoreBoard').value)
 
+let nameDisplayed = prompt('please enter a username ( ex: rock master) ')
 
-let challengerName = `${userName}`
-let nameDisplayed = document.getElementById('nameDisplay')
+let userName = `${nameDisplayed}`
 
-function nameDisplay() {
-    let userName = document.getElementById('userName')
-    if (typeof userName === null) {
-        nameDisplay.textContent = userName
-    }
-    else{
-        alert("PLEASE ENTER USERNAME")
-    }
-}
+nameDisplay.innerHTML=`<h1>${userName}</h1>`

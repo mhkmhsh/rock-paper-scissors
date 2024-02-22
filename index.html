@@ -24,42 +24,34 @@
 
         <!-- Display rock paper scissors-->
         <div class="row text-center p-5">
-            <div class="col-lg-6 col-md-6 col-sm-6 ">
-                <!-- User-->
-                <label for="userName" class="form-label"> Username</label>
+
+            <!-- User-->
 
 
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="sample: Rock Master"
-                        aria-label="Recipient's username" aria-describedby="button-addon2" id="userName">
-                    <button class="btn btn-dark" type="button" id="button-addon2" onclick="nameDisplay()">Submit</button>
-                </div>
-
-
-
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 p-3">
-                Challenger Name:
-                <div class="border rounded" id="nameDisplay"></div>
+            <div class="col-12 p-3">
+                <label for="userName" class="form-label"> Challenger Name</label>
+                <div class="border rounded text-center" id="nameDisplay"></div>
             </div>
         </div>
-       
+
         <!-- ROCK PAPER SCISSORS BUTTONS-->
         <div class="row align-items-start p-5">
-            <div class="col-lg-4 col-md-4 col-sm-4 p-2">
+            <div class="col-4 p-2">
                 <button type="button" class="btn btn-outline-light"><img src="image/rock.jpg"></button>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 p-2">
+            <div class="col-4  p-2">
                 <button type="button" class="btn btn-outline-light"><img src="image/paper.jpg"> </button>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 p-2">
+            <div class="col-4  p-2">
                 <button type="button" class="btn btn-outline-light"><img src="image/scissors.jpg"></button>
             </div>
         </div>
 
- <!-- wins and losses display-->
+        <!-- wins and losses display-->
         <div class="row border rounded">
-
+            <div class="col-4"><label for="userName" class="form-label"> You</label></div>
+            <div class="col-4"><label for="userName" class="form-label"> Computer chose:</label></div>
+            <div class="col-4"><label for="userName" class="form-label"> Computer</label></div>
         </div>
 
 
