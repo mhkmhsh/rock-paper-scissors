@@ -51,15 +51,28 @@
         </div>
 
         <!-- wins and losses display-->
-        <div class="row border rounded">
-            <div class="col-4"><label for="userName" class="form-label" onclick="playerScore('score')"> You</label></div>
-            <div class="col-4"><label for="userName" class="form-label" onclick="choiceDisplay('display')"> Computer chose:</label>
+        <!-- 
+            <div class="col-4"><label for="userName" class="form-label" onclick="playerScore('score')"> You: <br>
+            <p id="playerWins"></p></label></div>
+            <div class="col-4"><label for="userName" class="form-label" onclick="choiceDisplay('display')"> <p id="result"></p></label>
             </div>
-            <div class="col-4"><label for="userName" class="form-label" onclick="computerScore('compscore')"> Computer</label></div>
+            <div class="col-4"><label for="userName" class="form-label" onclick="computerScore('compscore')"> Computer: <br>
+                <p id="comWins"></p></label></div>
         </div>
-        <!-- DISPLAY MESSAGE-->
-        <h3 id="message"></h3>
-    </div>
+    -->
+        <div class="row border rounded">
+            <div class="col-4">
+                <h3 id="result"></h3>
+            </div>
+            <div class="col-4">
+                <h3>You: <span id="playerWins">0</span></h3>
+            </div>
+            <div class="col-4">
+                <h3> Computer: <span id="computerWins">0</span></h3>
+                <h3 id="congratsMessage"></h3>
+            </div>
+
+        </div>
     </div>
     <footer>
         <!-- place footer here -->
