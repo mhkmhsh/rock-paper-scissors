@@ -27,3 +27,17 @@ else{
 
   }
 }
+
+function updateScore(result) {
+  if (result === 'You win!') {
+    playerWins++;
+  } else if (result === 'Computer wins!') {
+    computerWins++;
+  }
+  playerWinsSpan.textContent = playerWins;
+  computerWinsSpan.textContent = computerWins;
+
+  if (playerWins === 10 || computerWins === 10) {
+    endGame();
+  }
+}
