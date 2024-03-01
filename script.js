@@ -1,43 +1,45 @@
-let nameDisplayed = prompt('please enter a username ( ex: rock master) ')
 
-let userName = `${nameDisplayed}`
-
-nameDisplay.innerHTML = `<h1>${userName}</h1>`
-
-const rockBTN = document.getElementById("rock");
-const paperBTN = document.getElementById("paper");
-const scissorsBTN = document.getElementById("scissors");
-
+let userChoice
 let playerWins = 0;
 let computerWins = 0;
+let computerChoice
 
-
-options.getElementById.addEventListener("click", function()) {
-  if( playerChoice === computerChoice) {
-return " it's a tie!"
+function playRound(playerChoice) {
+  getComputerChoice()
+  if (playerChoice === computerChoice) {
+    return " it's a tie!"
   }
-  else if  ((userChoice === 'rockBTN' && computerChoice === 'scissorsBTN') ||
-  (userChoice === 'paperBTN' && computerChoice === 'rockBTN') ||
-  (userChoice === 'scissorsBTN' && computerChoice === 'paperBTN')){
+  else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+    (userChoice === 'paper' && computerChoice === 'rock') ||
+    (userChoice === 'scissors' && computerChoice === 'paper')) {
     return " You Win !"
   }
-else{
-  return "Computer wins!";
+  else {
+    return "Computer wins!";
+  }
+
+}
+function getComputerChoice() {
+  const randomNumber = Math.floor(Math.random() * 3);
+  switch (randomNumber) {
+    case 0:
+      image = "image/rock.jpg";
+      return 'rock';
+    case 1:
+      image = "image/paper.jpg"
+      return 'paper';
+    case 2:
+      image = "image/scissors.jpg"
+      return 'scissors';
+  }
 }
 
-  }
-}
 
-function updateScore(result) {
-  if (result === 'You win!') {
-    playerWins++;
-  } else if (result === 'Computer wins!') {
-    computerWins++;
-  }
-  playerWinsSpan.textContent = playerWins;
-  computerWinsSpan.textContent = computerWins;
 
-  if (playerWins === 10 || computerWins === 10) {
-    endGame();
-  }
+
+
+function myFunction() {
+  let userInput = document.querySelector("#userInput");
+  let message = document.querySelector("#message");
+  message.innerHTML = " Welcome," + userInput.value + "!";
 }

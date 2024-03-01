@@ -29,40 +29,34 @@
 
 
             <div class="col-12 p-3">
-                <label for="userName" class="form-label"> Challenger Name</label>
-                <div class="border rounded text-center" id="nameDisplay"></div>
-            </div>
+           <h1 class="text-center"> Please enter your Name!</h1>
+           <input id="userInput">
+           <button onclick="myFunction()" type="button" class="btn btn-dark"> SUBMIT!</button>
+        <br>
+        <h1 id="message"></h1>
         </div>
 
         <!-- ROCK PAPER SCISSORS BUTTONS-->
         <div class="row align-items-start p-2" id="options">
             <div class="col-4 p-2">
-                <button type="button" class="btn btn-outline-dark" id="Rock" onclick="playRound('rock')""><img src="
+                <button type="button" class="btn btn-outline-dark" id="Rock" onclick="playRound('rock')"><img src="
                     image/rock.jpg"></button>
             </div>
             <div class="col-4  p-2">
                 <button type="button" class="btn btn-outline-success" id="paper"
-                    onclick="playRound('paper')""><img src=" image/paper.jpg"> </button>
+                    onclick="playRound('paper')""><img src=" image/paper.jpg" > </button>
             </div>
             <div class="col-4  p-2">
                 <button type="button" class="btn btn-outline-danger" id="scissors"
-                    onclick="playRound('rock')""><img src=" image/scissors.jpg"></button>
+                    onclick="playRound('scissors')""><img src=" image/scissors.jpg"></button>
             </div>
         </div>
 
         <!-- wins and losses display-->
-        <!-- 
-            <div class="col-4"><label for="userName" class="form-label" onclick="playerScore('score')"> You: <br>
-            <p id="playerWins"></p></label></div>
-            <div class="col-4"><label for="userName" class="form-label" onclick="choiceDisplay('display')"> <p id="result"></p></label>
-            </div>
-            <div class="col-4"><label for="userName" class="form-label" onclick="computerScore('compscore')"> Computer: <br>
-                <p id="comWins"></p></label></div>
-        </div>
-    -->
+     
         <div class="row border rounded">
             <div class="col-4 border rounded">
-                <h3 id="result"></h3>
+                <h3 id="getComputerChoice"></h3>
             </div>
             <div class="col-4">
                 <h3>You: <span id="playerWins">0</span></h3>
