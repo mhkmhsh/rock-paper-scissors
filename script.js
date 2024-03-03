@@ -1,4 +1,17 @@
-let userScore = 0
+let userScore = 0 
+let compScore = 0
+
+const choices = ["rock", "paper", "scissors"]
+
+
+function myFunction() {
+  let userInput = document.querySelector("#userInput");
+  let message = document.querySelector("#message");
+  message.innerHTML = " Welcome," + userInput.value + "!";
+}
+
+
+/*let userScore = 0
 let compScore = 0
 let totalRounds = 5
 let gamesPlayed = 0
@@ -63,4 +76,4 @@ function myFunction() {
   let message = document.querySelector("#message");
   message.innerHTML = " Welcome," + userInput.value + "!";
 }
-playGame();
+playGame() */
