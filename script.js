@@ -1,3 +1,14 @@
+let userScore = 0
+let compScore = 0
+let totalRounds = 5
+let gamesPlayed = 0
+
+
+
+
+
+
+
 
 
 function playRound(playerChoice) {
@@ -6,6 +17,16 @@ function playRound(playerChoice) {
   if (playerChoice === computerChoice) {
     return " it's a tie!"
   }
+  if(computerChoice === "rock") {
+document.getElementById("getComputerChoice").scr = "image/rock.jpg";
+  }
+  if(computerChoice === "paper") {
+    document.getElementById("getComputerChoice").scr = "image/paper.jpg";
+  }
+  if(computerChoice === "scissors") {
+    document.getElementById("getComputerChoice").scr = "image/scissors.jpg";
+  }
+
   else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
     (userChoice === 'paper' && computerChoice === 'rock') ||
     (userChoice === 'scissors' && computerChoice === 'paper')) {
@@ -31,8 +52,7 @@ function getComputerChoice() {
   }
 }
 
-var playerWins = 0;
-var computerWins = 0;
+
 
 
 
