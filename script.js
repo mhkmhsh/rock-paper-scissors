@@ -1,10 +1,8 @@
 
-let userChoice
-
-let computerChoice
 
 function playRound(playerChoice) {
-  getComputerChoice()
+  const options = ["rock", "paper", "scissors"];
+  const computerChoice = options[Math.floor(Math.random() * 3)];
   if (playerChoice === computerChoice) {
     return " it's a tie!"
   }
@@ -40,9 +38,9 @@ var computerWins = 0;
 
 
 
-
 function myFunction() {
   let userInput = document.querySelector("#userInput");
   let message = document.querySelector("#message");
   message.innerHTML = " Welcome," + userInput.value + "!";
 }
+playGame();
