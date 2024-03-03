@@ -1,7 +1,6 @@
 
 let userChoice
-let playerWins = 0;
-let computerWins = 0;
+
 let computerChoice
 
 function playRound(playerChoice) {
@@ -33,6 +32,9 @@ function getComputerChoice() {
       return 'scissors';
   }
 }
+
+var playerWins = 0;
+var computerWins = 0;
 
 
 

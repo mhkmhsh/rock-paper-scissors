@@ -29,43 +29,47 @@
 
 
             <div class="col-12 p-3">
-           <h2 class="text-center"> Please enter your Name!</h2>
-           <input id="userInput">
-           <button onclick="myFunction()" type="button" class="btn btn-dark"> SUBMIT!</button>
-        <br>
-        <h1 id="message"></h1>
-        </div>
+                <h2 class="text-center"> Please enter your Name!</h2>
+                <input id="userInput">
+                <button onclick="myFunction()" type="button" class="btn btn-dark"> SUBMIT!</button>
+                <br>
+                <h1 id="message"></h1>
+            </div>
 
-        <!-- ROCK PAPER SCISSORS BUTTONS-->
-        <div class="row align-items-start p-2" id="options">
-            <div class="col-4 p-2">
-                <button type="button" class="btn btn-outline-dark" id="Rock" onclick="playRound('rock')"><img src="
+            <!-- ROCK PAPER SCISSORS BUTTONS-->
+            <div class="row align-items-start p-2" id="options">
+                <div class="col-4 p-2">
+                    <button type="button" class="btn btn-outline-dark" id="Rock" onclick="playRound('rock')"><img src="
                     image/rock.jpg"></button>
+                </div>
+                <div class="col-4  p-2">
+                    <button type="button" class="btn btn-outline-success" id="paper"
+                        onclick="playRound('paper')""><img src=" image/paper.jpg"> </button>
+                </div>
+                <div class="col-4  p-2">
+                    <button type="button" class="btn btn-outline-danger" id="scissors"
+                        onclick="playRound('scissors')""><img src=" image/scissors.jpg"></button>
+                </div>
             </div>
-            <div class="col-4  p-2">
-                <button type="button" class="btn btn-outline-success" id="paper"
-                    onclick="playRound('paper')""><img src=" image/paper.jpg" > </button>
-            </div>
-            <div class="col-4  p-2">
-                <button type="button" class="btn btn-outline-danger" id="scissors"
-                    onclick="playRound('scissors')""><img src=" image/scissors.jpg"></button>
+
+            <!-- wins and losses display-->
+
+            <div class="row rounded p-3">
+                <div class="col-4 border rounded">
+                    <h3 id="getComputerChoice"></h3>
+                </div>
+                <div class="col-4">
+                    <h3>You: <span id="playerWins"></span></h3>
+                </div>
+                <div class="col-4">
+                    <h3> Computer: <span id="computerWins"></span></h3>
+                    <h3 id="congratsMessage"></h3>
+                </div>
+
             </div>
         </div>
-
-        <!-- wins and losses display-->
-     
-        <div class="row border rounded">
-            <div class="col-4 border rounded">
-                <h3 id="getComputerChoice"></h3>
-            </div>
-            <div class="col-4">
-                <h3>You: <span id="playerWins">0</span></h3>
-            </div>
-            <div class="col-4">
-                <h3> Computer: <span id="computerWins">0</span></h3>
-                <h3 id="congratsMessage"></h3>
-            </div>
-
+        <div class=" row  col-12">
+            <input type="reset" value="Reset" class="btn btn-dark">
         </div>
     </div>
     <footer>
