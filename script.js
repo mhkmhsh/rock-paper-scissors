@@ -19,6 +19,19 @@ function getComputerChoice() {
   return choices[randomIndex];
 }
 
+// Function to display a random winning reaction
+function displayRandomWinReaction() {
+  const randomWinReaction = winReactions[Math.floor(Math.random() * winReactions.length)];
+  document.getElementById('winReaction').innerText = randomWinReaction;
+}
+
+// Function to display a random losing reaction
+function displayRandomLoseReaction() {
+  const randomLoseReaction = loseReactions[Math.floor(Math.random() * loseReactions.length)];
+  document.getElementById('loseReaction').innerText = randomLoseReaction;
+}
+
+// Function to handle a round of the game
 function playRound(userChoice) {
   if (roundsPlayed < 5) {
       // Display user's choice image
@@ -28,7 +41,7 @@ function playRound(userChoice) {
       const computerChoice = getComputerChoice();
 
       // Display computer's choice image
-      document.getElementById("compHolder").src = "image/" + computerChoice + ".jpg";
+      document.getElementById("getComputerChoice").src = "image/" + computerChoice + ".jpg";
 
       // Compare choices and display result
       if (userChoice === computerChoice) {
@@ -37,30 +50,35 @@ function playRound(userChoice) {
                  (userChoice === 'paper' && computerChoice === 'rock') ||
                  (userChoice === 'scissors' && computerChoice === 'paper')) {
           document.getElementById("result").innerText = "You Win!";
-          userScore++; // add user's score
+          userScore++; // increment user's score
+          displayRandomWinReaction(); // Display a random win reaction
       } else {
           document.getElementById("result").innerText = "Comp wins!";
-          compScore++; // add computer's score
+          compScore++; // increment computer's score
+          displayRandomLoseReaction(); // Display a random lose reaction
       }
 
+      // Update scores on the scoreboard
       document.getElementById("playerWins").innerText = userScore;
       document.getElementById("computerWins").innerText = compScore;
-      
-      roundsPlayed++; // add roundsPlayed after each round
+
+      roundsPlayed++; // increment roundsPlayed after each round
   }
 }
 
-// reset button 
-function resetPage() {
-  location.reload(); // Reloads the current page
-}
-
-
 
 // reset button 
 function resetPage() {
   location.reload(); // Reloads the current page
 }
+
+
+
+// reset button 
+function resetPage() {
+  location.reload(); // Reloads the current page
+}
+
 
 
 // Reactions for winning
