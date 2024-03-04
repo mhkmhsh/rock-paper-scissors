@@ -1,3 +1,12 @@
+function myFunction() {
+  let userInput = document.querySelector("#userInput")
+  let message = document.querySelector("#message")
+  message.innerHTML ="Welcome to the game, " + userInput.value +"!"
+
+
+}
+
+
 let userScore = 0;
 let compScore = 0;
 let roundsPlayed = 0; // Initialize roundsPlayed
@@ -44,13 +53,27 @@ function getComputerChoice() {
 
 // reset button 
 function resetPage() {
-    userScore = 0; // Reset user's score
-    compScore = 0; // Reset computer's score
-    roundsPlayed = 0; // Reset roundsPlayed
-    document.getElementById('result').innerText = ''; // Clear result text
-    document.getElementById('userHolder').src = ''; // Clear user's choice image
-    document.getElementById('getComputerChoice').src = ''; // Clear computer's choice image
+  location.reload(); // Reloads the current page
 }
+
+
+// Reactions for winning
+const winReactions = [
+  "Great job! You're a Winner!!!",
+  "Congratulations! You're a Scissor!",
+  "You're a ROCK ! Keep it up!",
+  "Paper is yours! Well done!",
+  "Amazing win! Keep the streak going!"
+];
+
+// Reactions for losing
+const loseReactions = [
+  "You suck so bad!",
+  "Don't worry, you'll never win!",
+  "It happens to the dumbest of us. Keep trying!",
+  "Keep your head down! There's never another chance!",
+  "Learn from this and never come back!"
+];
 
 
 /*let userScore = 0
