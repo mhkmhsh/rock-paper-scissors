@@ -47,12 +47,12 @@
             <div class="row rounded p-3">
                 <div class="col-6 border rounded">
                     <div id="getComputerChoice">
-                        <img id = "compHolder" class="img-fluid" src="image/place.png">
+                        <img id="compHolder" class="img-fluid" src="image/place.png">
                     </div>
                 </div>
                 <div class="col-6 border rounded">
                     <div id="getUserChoice">
-                        <img id = "userHolder" class="img-fluid" src="image/place.png">
+                        <img id="userHolder" class="img-fluid" src="image/place.png">
                     </div>
                 </div>
             </div>
@@ -62,16 +62,16 @@
 
             <div class="row align-items-start p-2" id="options">
                 <div class="col-4 p-2">
-                    <button type="button" class="btn btn-outline-dark" id="Rock" onclick="playRound('rock')"><img src="
+                    <button type="button" class="btn btn-outline-dark" id="rockButton" onclick="playRound('rock')"><img src="
                     image/rock.jpg"></button>
                 </div>
                 <div class="col-4  p-2">
-                    <button type="button" class="btn btn-outline-success" id="paper"
-                        onclick="playRound('paper')""><img src=" image/paper.jpg"> </button>
+                    <button type="button" class="btn btn-outline-success" id="paperButton"
+                        onclick="playRound('paper')"><img src=" image/paper.jpg"> </button>
                 </div>
                 <div class="col-4  p-2">
-                    <button type="button" class="btn btn-outline-danger" id="scissors"
-                        onclick="playRound('scissors')""><img src=" image/scissors.jpg"></button>
+                    <button type="button" class="btn btn-outline-danger" id="scissorsButton"
+                        onclick="playRound('scissors')"><img src=" image/scissors.jpg"></button>
                 </div>
             </div>
 
@@ -96,15 +96,22 @@
 
 
         <!--RESET BUTTON -->
-        <div class=" row  col-12">
-            <input type="reset" value="Reset" class="btn btn-dark">
+        <div class=" row  col-12 p-3">
+            <button class="btn btn-dark" onclick="resetPage()">Reset</button>
         </div>
     </div>
 
     <!--END OF HTML -->
-    <footer>
-        <!-- place footer here -->
-    </footer>
+    <footer class="bg-dark text-white text-center py-2 flex-bottom">
+        <div class="container">
+          <p>&copy; 2023 WDPP level 2</p>
+          <p>By MHKMHSH
+   <a class="btn text-white btn-floating m-1" style="background-color: #fefdea" href="https://github.com/mhkmhsh"
+              role="button"><i class="fab fa-github"></i></a>
+          </p>
+          </p>
+        </div>
+      </footer>
 </body>
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

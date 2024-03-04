@@ -1,43 +1,44 @@
-let userScore = 0 
-let compScore = 0
-// MARKS COMP SCORE AND USER SCORE AS ZERO 
-const choices = ["rock", "paper", "scissors"]
-// MARKS CHOICES
+let userScore = 0;
+let compScore = 0;
+let roundsPlayed = 0; // Initialize roundsPlayed
 
-function myFunction() {
-  let userInput = document.querySelector("#userInput");
-  let message = document.querySelector("#message");
-  message.innerHTML = " Welcome," + userInput.value + "!";
+const choices = ["rock", "paper", "scissors"];
+
+function playRound(userChoice) {
+    if (roundsPlayed < 5) {
+        document.getElementById('userHolder').src = userChoice + ".png";
+    }
+
+    const computerChoice = choices[Math.floor(Math.random() * 3)]; 
+
+    // Display computer's choice
+    document.getElementById("getComputerChoice").src = "image/" + computerChoice + ".jpg";
+
+    // Compare choices and display result
+    if (userChoice === computerChoice) {
+        document.getElementById("result").innerText = "It's a tie!";
+    } else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+               (userChoice === 'paper' && computerChoice === 'rock') ||
+               (userChoice === 'scissors' && computerChoice === 'paper')) {
+        document.getElementById("result").innerText = "You Win!";
+        userScore++; // add user's score
+    } else {
+        document.getElementById("result").innerText = "Computer wins!";
+        compScore++; // add computer's score
+    }
+    roundsPlayed++; // add roundsPlayed after each round
 }
-// NAME INPUT 
 
-
-function playRound(playerChoice) {
-  
-  const computerChoice = options[Math.floor(Math.random() * 3)];
-  // TELLS COMPUTER TO PICK 
-  if (playerChoice === computerChoice) {
-    return " it's a tie!"
-  }
-  if(computerChoice === "rock") {
-document.getElementById("getComputerChoice").scr = "image/rock.jpg";
-  }
-  if(computerChoice === "paper") {
-    document.getElementById("getComputerChoice").scr = "image/paper.jpg";
-  }
-  if(computerChoice === "scissors") {
-    document.getElementById("getComputerChoice").scr = "image/scissors.jpg";
-  }
-
-  else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
-    (userChoice === 'paper' && computerChoice === 'rock') ||
-    (userChoice === 'scissors' && computerChoice === 'paper')) {
-    return " You Win !"
-  }
-  else {
-    return "Computer wins!";
-  }
+// reset button 
+function resetPage() {
+    userScore = 0; // Reset user's score
+    compScore = 0; // Reset computer's score
+    roundsPlayed = 0; // Reset roundsPlayed
+    document.getElementById('result').innerText = ''; // Clear result text
+    document.getElementById('userHolder').src = ''; // Clear user's choice image
+    document.getElementById('getComputerChoice').src = ''; // Clear computer's choice image
 }
+
 
 /*let userScore = 0
 let compScore = 0
