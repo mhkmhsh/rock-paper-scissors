@@ -15,7 +15,7 @@ const choices = ["rock", "paper", "scissors"];
 
 function playRound(userChoice) {
     if (roundsPlayed < 5) {
-        document.getElementById('userHolder').src = userChoice + ".jpg";
+        document.getElementById('userHolder').src = getUserChoice + ".jpg";
     }
 
     const computerChoice = choices[Math.floor(Math.random() * 3)]; 
@@ -39,16 +39,17 @@ function playRound(userChoice) {
 }
 
 function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
-    const randomIndex = Math.floor(Math.random() * choices.length);
-    const computerChoice = choices[randomIndex];
-    const computerImage = document.getElementById("getComputerChoice");
+  const choices = ["rock", "paper", "scissors"];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  const computerChoice = choices[randomIndex];
+  
+  // Display computer's choice image
+  const computerImage = document.getElementById("getComputerChoice");
+  computerImage.src = "image/" + computerChoice + ".jpg";
 
-    // Display computer's choice image
-    computerImage.src = "image/" + computerChoice + ".jpg";
-
-    return computerChoice;
+  return computerChoice;
 }
+
 
 
 // reset button 
