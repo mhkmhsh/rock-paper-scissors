@@ -42,6 +42,10 @@ function playRound(userChoice) {
           document.getElementById("result").innerText = "Comp wins!";
           compScore++; // add computer's score
       }
+
+      document.getElementById("playerWins").innerText = userScore;
+      document.getElementById("computerWins").innerText = compScore;
+      
       roundsPlayed++; // add roundsPlayed after each round
   }
 }
