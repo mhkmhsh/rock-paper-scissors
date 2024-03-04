@@ -15,7 +15,7 @@ const choices = ["rock", "paper", "scissors"];
 
 function playRound(userChoice) {
     if (roundsPlayed < 5) {
-        document.getElementById('userHolder').src = userChoice + ".png";
+        document.getElementById('userHolder').src = userChoice + ".jpg";
     }
 
     const computerChoice = choices[Math.floor(Math.random() * 3)]; 
