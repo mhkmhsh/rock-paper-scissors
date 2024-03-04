@@ -14,29 +14,30 @@ let roundsPlayed = 0; // Initialize roundsPlayed
 const choices = ["rock", "paper", "scissors"];
 
 function playRound(userChoice) {
-    if (roundsPlayed < 5) {
-        document.getElementById('userHolder').src = getUserChoice + ".jpg";
-    }
+  if (roundsPlayed < 5) {
+      document.getElementById('userHolder').src = "image/" + userChoice + ".jpg";
+  }
 
-    const computerChoice = choices[Math.floor(Math.random() * 3)]; 
+  const computerChoice = getComputerChoice();
 
-    // Display computer's choice
-    document.getElementById("getComputerChoice").src = "image/" + computerChoice + ".jpg";
+  // Display computer's choice
+  document.getElementById("getComputerChoice").src = "image/" + computerChoice + ".jpg";
 
-    // Compare choices and display result
-    if (userChoice === computerChoice) {
-        document.getElementById("result").innerText = "It's a tie!";
-    } else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
-               (userChoice === 'paper' && computerChoice === 'rock') ||
-               (userChoice === 'scissors' && computerChoice === 'paper')) {
-        document.getElementById("result").innerText = "You Win!";
-        userScore++; // add user's score
-    } else {
-        document.getElementById("result").innerText = "Computer wins!";
-        compScore++; // add computer's score
-    }
-    roundsPlayed++; // add roundsPlayed after each round
+  // Compare choices and display result
+  if (userChoice === computerChoice) {
+      document.getElementById("result").innerText = "It's a tie!";
+  } else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+             (userChoice === 'paper' && computerChoice === 'rock') ||
+             (userChoice === 'scissors' && computerChoice === 'paper')) {
+      document.getElementById("result").innerText = "You Win!";
+      userScore++; // add user's score
+  } else {
+      document.getElementById("result").innerText = "Comp wins!";
+      compScore++; // add computer's score
+  }
+  roundsPlayed++; // add roundsPlayed after each round
 }
+
 
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
