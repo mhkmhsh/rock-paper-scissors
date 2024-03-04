@@ -13,42 +13,42 @@ let roundsPlayed = 0; // Initialize roundsPlayed
 
 const choices = ["rock", "paper", "scissors"];
 
-function playRound(userChoice) {
-  if (roundsPlayed < 5) {
-      document.getElementById('userHolder').src = "image/" + userChoice + ".jpg";
-  }
-
-  const computerChoice = getComputerChoice();
-
-  // Display computer's choice
-  document.getElementById("getComputerChoice").src = "image/" + computerChoice + ".jpg";
-
-  // Compare choices and display result
-  if (userChoice === computerChoice) {
-      document.getElementById("result").innerText = "It's a tie!";
-  } else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
-             (userChoice === 'paper' && computerChoice === 'rock') ||
-             (userChoice === 'scissors' && computerChoice === 'paper')) {
-      document.getElementById("result").innerText = "You Win!";
-      userScore++; // add user's score
-  } else {
-      document.getElementById("result").innerText = "Comp wins!";
-      compScore++; // add computer's score
-  }
-  roundsPlayed++; // add roundsPlayed after each round
-}
-
-
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
   const randomIndex = Math.floor(Math.random() * choices.length);
-  const computerChoice = choices[randomIndex];
-  
-  // Display computer's choice image
-  const computerImage = document.getElementById("getComputerChoice");
-  computerImage.src = "image/" + computerChoice + ".jpg";
+  return choices[randomIndex];
+}
 
-  return computerChoice;
+function playRound(userChoice) {
+  if (roundsPlayed < 5) {
+      // Display user's choice image
+      document.getElementById('userHolder').src = "image/" + userChoice + ".jpg";
+
+      // Get computer's choice
+      const computerChoice = getComputerChoice();
+
+      // Display computer's choice image
+      document.getElementById("compHolder").src = "image/" + computerChoice + ".jpg";
+
+      // Compare choices and display result
+      if (userChoice === computerChoice) {
+          document.getElementById("result").innerText = "It's a tie!";
+      } else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+                 (userChoice === 'paper' && computerChoice === 'rock') ||
+                 (userChoice === 'scissors' && computerChoice === 'paper')) {
+          document.getElementById("result").innerText = "You Win!";
+          userScore++; // add user's score
+      } else {
+          document.getElementById("result").innerText = "Comp wins!";
+          compScore++; // add computer's score
+      }
+      roundsPlayed++; // add roundsPlayed after each round
+  }
+}
+
+// reset button 
+function resetPage() {
+  location.reload(); // Reloads the current page
 }
 
 
