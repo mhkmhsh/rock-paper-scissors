@@ -29,6 +29,19 @@ function playRound(userChoice) {
     roundsPlayed++; // add roundsPlayed after each round
 }
 
+function getComputerChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    const computerChoice = choices[randomIndex];
+    const computerImage = document.getElementById("getComputerChoice");
+
+    // Display computer's choice image
+    computerImage.src = "image/" + computerChoice + ".jpg";
+
+    return computerChoice;
+}
+
+
 // reset button 
 function resetPage() {
     userScore = 0; // Reset user's score
