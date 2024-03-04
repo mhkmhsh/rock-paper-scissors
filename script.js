@@ -1,15 +1,43 @@
 let userScore = 0 
 let compScore = 0
-
+// MARKS COMP SCORE AND USER SCORE AS ZERO 
 const choices = ["rock", "paper", "scissors"]
-
+// MARKS CHOICES
 
 function myFunction() {
   let userInput = document.querySelector("#userInput");
   let message = document.querySelector("#message");
   message.innerHTML = " Welcome," + userInput.value + "!";
 }
+// NAME INPUT 
 
+
+function playRound(playerChoice) {
+  
+  const computerChoice = options[Math.floor(Math.random() * 3)];
+  // TELLS COMPUTER TO PICK 
+  if (playerChoice === computerChoice) {
+    return " it's a tie!"
+  }
+  if(computerChoice === "rock") {
+document.getElementById("getComputerChoice").scr = "image/rock.jpg";
+  }
+  if(computerChoice === "paper") {
+    document.getElementById("getComputerChoice").scr = "image/paper.jpg";
+  }
+  if(computerChoice === "scissors") {
+    document.getElementById("getComputerChoice").scr = "image/scissors.jpg";
+  }
+
+  else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+    (userChoice === 'paper' && computerChoice === 'rock') ||
+    (userChoice === 'scissors' && computerChoice === 'paper')) {
+    return " You Win !"
+  }
+  else {
+    return "Computer wins!";
+  }
+}
 
 /*let userScore = 0
 let compScore = 0
@@ -76,4 +104,4 @@ function myFunction() {
   let message = document.querySelector("#message");
   message.innerHTML = " Welcome," + userInput.value + "!";
 }
-playGame() */
+playGame()*/
